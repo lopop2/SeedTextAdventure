@@ -6,7 +6,7 @@ public class TextController : MonoBehaviour {
 	
 	public Text text;
 	
-	private enum States {Earth, Earth_1, Earth_2, Intro, ship, ship_1, ship_2, Epic, Epic201367065b, Epic201367065c, Epic201367065d, Epic201367065d_1, TauCeteE, TauCeteE_1, Mars, Mars_1, Kepler,  
+	private enum States {Earth, Earth_1, Earth_2, Intro, ship, ship_1, ship_2, Epic, Epic201367065b, Epic201367065c, Epic201367065d, Epic201367065d_1, TauCetiE, TauCetiE_1, Mars, Mars_1, Kepler,  
 		Kepler_1,  Kepler22b, Kepler62e, Kepler62f, Kepler186f, Kepler296e, Kepler296f, Kepler438b, Kepler440b, Kepler442b, Kepler452b, Kepler452b_1, Gliese, Gliese_1, Gliese163c, 
 		Gliese581d, Gliese581g, Gliese581g_1, clone, explore, denied, allowed, laser, terraform, terraform_1, eliminate, android, terminator, explore_1, radiation, Alien} 
 	
@@ -55,8 +55,8 @@ public class TextController : MonoBehaviour {
 		else if (myState == States.denied) {state_denied();}
 		else if (myState == States.allowed) {state_allowed();}
 		else if (myState == States.laser) {state_laser();}
-		else if (myState == States.TauCeteE) {state_TauCeteE();}
-		else if (myState == States.TauCeteE_1) {state_TauCeteE_1();}
+		else if (myState == States.TauCetiE) {state_TauCetiE();}
+		else if (myState == States.TauCetiE_1) {state_TauCetiE_1();}
 		else if (myState == States.terraform) {state_terraform();}
 		else if (myState == States.terraform_1) {state_terraform_1();}
 		else if (myState == States.Mars) {state_Mars();}
@@ -114,7 +114,7 @@ public class TextController : MonoBehaviour {
 			myState = States.Epic201367065d;
 		}
 		else if (Input.GetKeyDown(KeyCode.T)) { 
-			myState = States.TauCeteE;
+			myState = States.TauCetiE;
 		}
 		else if (Input.GetKeyDown(KeyCode.M)) {
 			myState = States.Mars;
@@ -141,7 +141,7 @@ public class TextController : MonoBehaviour {
 		text.text = "For which planet do you wish to set course? \n\n " +
 			"Press G for Gliese planets, " +
 				"press K for Kepler planets, E for Epic, T for " +
-				"Tau Cete e, or M for Mars. " ;
+				"Tau Ceti e, or M for Mars. " ;
 		if (Input.GetKeyDown(KeyCode.K)) {
 			myState = States.Kepler_1;
 		}
@@ -152,7 +152,7 @@ public class TextController : MonoBehaviour {
 			myState = States.Epic201367065d;
 		}
 		else if (Input.GetKeyDown(KeyCode.T)) { 
-			myState = States.TauCeteE_1;
+			myState = States.TauCetiE_1;
 		}
 		else if (Input.GetKeyDown(KeyCode.M)) {
 			myState = States.Mars_1;
@@ -162,7 +162,7 @@ public class TextController : MonoBehaviour {
 		text.text = "For which planet do you wish to set course? \n\n " +
 			"Press G for Gliese planets, " +
 				"press K for Kepler planets, E for Epic, T for " +
-				"Tau Cete e, or M for Mars. " ;
+				"Tau Ceti e, or M for Mars. " ;
 		if (Input.GetKeyDown(KeyCode.K)) {
 			myState = States.Kepler_1;
 		}
@@ -173,7 +173,7 @@ public class TextController : MonoBehaviour {
 			myState = States.Epic201367065d_1;
 		}
 		else if (Input.GetKeyDown(KeyCode.T)) { 
-			myState = States.TauCeteE_1;
+			myState = States.TauCetiE_1;
 		}
 		else if (Input.GetKeyDown(KeyCode.M)) {
 			myState = States.Mars_1;
@@ -545,18 +545,18 @@ public class TextController : MonoBehaviour {
 			myState = States.ship;
 		}								
 		
-	}		void state_TauCeteE() {
+	}		void state_TauCetiE() {
 		text.text = "En route, you discover an abandoned alien ship containing terraforming technology and equipment. \n\n " +
-			"Press L to continue to Tau Cete with the alien technology, " +
+			"Press L to continue to Tau Ceti with the alien technology, " +
 				"or S to bring it to another planet. " ;
 		if (Input.GetKeyDown (KeyCode.L)) {
-			myState = States.TauCeteE_1;
+			myState = States.TauCetiE_1;
 		}
 		else if (Input.GetKeyDown (KeyCode.S)) {
 			myState = States.ship_1;
 		}	
-	}	void state_TauCeteE_1() {
-		text.text = "You have arrived on Tau Cete. " +
+	}	void state_TauCetiE_1() {
+		text.text = "You have arrived on Tau Ceti. " +
 			"Press Q to construct cloning facility, " +
 				"or R to explore planet. " ;
 		if (Input.GetKeyDown (KeyCode.Q)) {
